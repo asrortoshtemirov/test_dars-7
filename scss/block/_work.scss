@@ -1,0 +1,137 @@
+.work__block {
+  max-width: 1085px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.work__block-title {
+  font-family: $font2;
+  max-width: 255px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: #83888F;
+  margin-bottom: 80px;
+}
+
+.work__line {
+  margin-right: 192px;
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2px;
+  background-color: #FDD6BA;  
+  margin-bottom: 67px;
+
+  span {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: #FEFCF7;
+    border: 2px solid #0E8784;
+  }
+}
+
+.work__list {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.work__item {
+  max-width: 285px;
+  &::before{
+    content: "";
+    height: 72px;
+    display: inline-block;
+    background-repeat: no-repeat;
+  }
+}
+.work__item:nth-child(1)::before {
+  width: 90px;
+  background-image: url(../../img/work-icon1.svg);
+}
+.work__item:nth-child(2)::before {
+  width: 101px;
+  background-image: url(../../img/work-icon2.svg);
+}
+.work__item:nth-child(3)::before {
+  width: 98px;
+  background-image: url(../../img/work-icon3.svg);
+}
+
+.work__item + .work__item {
+  margin-left: 10px;
+}
+
+.work__title {
+  max-width: 255px;
+  font-family: $font2;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+  color: #333D4B;
+  margin-top: 38px;
+}
+
+.work__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #333D4B;
+  margin-top: 42px;
+}
+
+.work__btn {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 15px 31px;
+  background-color: $primary-color;
+  border-radius: 6px;
+  font-family: $font2;
+  border: none;
+  color: #FEFCF7;
+  cursor: pointer;
+  margin-top: 64px;
+}
+
+@media screen and (max-width:660px) {
+  .work__block-title {
+    max-width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .work__line {
+    display: none;
+  }
+  .work__list {
+    flex-direction: column;
+  }
+  .work__item {
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 56px;
+    &:nth-child(2) {
+      margin: 0 auto;
+      margin-top: 56px;
+    }
+    &:nth-child(3) {
+      margin: 0 auto;
+      margin-top: 56px;
+    }
+  }
+  .work__block-title {
+    margin-bottom: 24px;
+  }
+  .work__title {
+    max-width: 100%;
+  }
+  .work__btn-block {
+    text-align: center;
+  }
+}
